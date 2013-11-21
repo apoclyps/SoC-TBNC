@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_12ac3d16DataSet3" targetNamespace="http://tempuri.org/_12ac3d16DataSet3.xsd" xmlns:mstns="http://tempuri.org/_12ac3d16DataSet3.xsd" xmlns="http://tempuri.org/_12ac3d16DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_12ac3d16ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_12ac3d16ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default._12ac3d16ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="monthlyfeedetailsTableAdapter" GeneratorDataComponentClassName="monthlyfeedetailsTableAdapter" Name="monthlyfeedetails" UserDataComponentName="monthlyfeedetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_12ac3d16ConnectionString (Settings)" DbObjectName="`12ac3d16`.monthlyfeedetails" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Child Name`, `PlacementType`, `RoomName`, `DailyCharge`, `WeeklyCharge`, `Teas`, `TeaCharge` FROM `12ac3d16`.`monthlyfeedetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Child Name" DataSetColumn="Child Name" />
+              <Mapping SourceColumn="PlacementType" DataSetColumn="PlacementType" />
+              <Mapping SourceColumn="RoomName" DataSetColumn="RoomName" />
+              <Mapping SourceColumn="DailyCharge" DataSetColumn="DailyCharge" />
+              <Mapping SourceColumn="WeeklyCharge" DataSetColumn="WeeklyCharge" />
+              <Mapping SourceColumn="Teas" DataSetColumn="Teas" />
+              <Mapping SourceColumn="TeaCharge" DataSetColumn="TeaCharge" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_12ac3d16DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_12ac3d16DataSet3" msprop:Generator_UserDSName="_12ac3d16DataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="monthlyfeedetails" msprop:Generator_TableClassName="monthlyfeedetailsDataTable" msprop:Generator_TableVarName="tablemonthlyfeedetails" msprop:Generator_TablePropName="monthlyfeedetails" msprop:Generator_RowDeletingName="monthlyfeedetailsRowDeleting" msprop:Generator_UserTableName="monthlyfeedetails" msprop:Generator_RowChangingName="monthlyfeedetailsRowChanging" msprop:Generator_RowEvHandlerName="monthlyfeedetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="monthlyfeedetailsRowDeleted" msprop:Generator_RowEvArgName="monthlyfeedetailsRowChangeEvent" msprop:Generator_RowChangedName="monthlyfeedetailsRowChanged" msprop:Generator_RowClassName="monthlyfeedetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Child_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnChild_Name" msprop:Generator_ColumnPropNameInRow="Child_Name" msprop:Generator_ColumnPropNameInTable="Child_NameColumn" msprop:Generator_UserColumnName="Child Name" type="xs:long" />
+              <xs:element name="PlacementType" msprop:Generator_ColumnVarNameInTable="columnPlacementType" msprop:Generator_ColumnPropNameInRow="PlacementType" msprop:Generator_ColumnPropNameInTable="PlacementTypeColumn" msprop:Generator_UserColumnName="PlacementType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomName" msprop:Generator_ColumnVarNameInTable="columnRoomName" msprop:Generator_ColumnPropNameInRow="RoomName" msprop:Generator_ColumnPropNameInTable="RoomNameColumn" msprop:Generator_UserColumnName="RoomName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DailyCharge" msprop:Generator_ColumnVarNameInTable="columnDailyCharge" msprop:Generator_ColumnPropNameInRow="DailyCharge" msprop:Generator_ColumnPropNameInTable="DailyChargeColumn" msprop:Generator_UserColumnName="DailyCharge" type="xs:decimal" />
+              <xs:element name="WeeklyCharge" msprop:Generator_ColumnVarNameInTable="columnWeeklyCharge" msprop:Generator_ColumnPropNameInRow="WeeklyCharge" msprop:Generator_ColumnPropNameInTable="WeeklyChargeColumn" msprop:Generator_UserColumnName="WeeklyCharge" type="xs:decimal" />
+              <xs:element name="Teas" msprop:Generator_ColumnVarNameInTable="columnTeas" msprop:Generator_ColumnPropNameInRow="Teas" msprop:Generator_ColumnPropNameInTable="TeasColumn" msprop:Generator_UserColumnName="Teas" type="xs:unsignedByte" />
+              <xs:element name="TeaCharge" msprop:Generator_ColumnVarNameInTable="columnTeaCharge" msprop:Generator_ColumnPropNameInRow="TeaCharge" msprop:Generator_ColumnPropNameInTable="TeaChargeColumn" msprop:Generator_UserColumnName="TeaCharge" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:monthlyfeedetails" />
+      <xs:field xpath="mstns:RoomName" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

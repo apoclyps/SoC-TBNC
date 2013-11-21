@@ -1,0 +1,24 @@
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.MonthlyFee.resources
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Notifications.resources
+C:\Users\Cezzster\Documents\PROJECTS\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Payment.resources
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.MonthlyFee.resources
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Notifications.resources
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Payment.resources
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Cezzster\Dropbox\AC32006 - Database Systems - Team Share\Database - Assignment 3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb

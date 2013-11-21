@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_12ac3d16DataSet7" targetNamespace="http://tempuri.org/_12ac3d16DataSet7.xsd" xmlns:mstns="http://tempuri.org/_12ac3d16DataSet7.xsd" xmlns="http://tempuri.org/_12ac3d16DataSet7.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_12ac3d16ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_12ac3d16ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default._12ac3d16ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="overduedetails1TableAdapter" GeneratorDataComponentClassName="overduedetails1TableAdapter" Name="overduedetails1" UserDataComponentName="overduedetails1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_12ac3d16ConnectionString (Settings)" DbObjectName="`12ac3d16`.overduedetails1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Child Name`, `Date Due`, `Days Overdue`, `Late Fees`, `Total Overdue` FROM `12ac3d16`.`overduedetails1`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Child Name" DataSetColumn="Child Name" />
+              <Mapping SourceColumn="Date Due" DataSetColumn="Date Due" />
+              <Mapping SourceColumn="Days Overdue" DataSetColumn="Days Overdue" />
+              <Mapping SourceColumn="Late Fees" DataSetColumn="Late Fees" />
+              <Mapping SourceColumn="Total Overdue" DataSetColumn="Total Overdue" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_12ac3d16DataSet7" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_12ac3d16DataSet7" msprop:Generator_UserDSName="_12ac3d16DataSet7">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="overduedetails1" msprop:Generator_TableClassName="overduedetails1DataTable" msprop:Generator_TableVarName="tableoverduedetails1" msprop:Generator_TablePropName="overduedetails1" msprop:Generator_RowDeletingName="overduedetails1RowDeleting" msprop:Generator_UserTableName="overduedetails1" msprop:Generator_RowChangingName="overduedetails1RowChanging" msprop:Generator_RowEvHandlerName="overduedetails1RowChangeEventHandler" msprop:Generator_RowDeletedName="overduedetails1RowDeleted" msprop:Generator_RowEvArgName="overduedetails1RowChangeEvent" msprop:Generator_RowChangedName="overduedetails1RowChanged" msprop:Generator_RowClassName="overduedetails1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Child_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnChild_Name" msprop:Generator_ColumnPropNameInRow="Child_Name" msprop:Generator_ColumnPropNameInTable="Child_NameColumn" msprop:Generator_UserColumnName="Child Name" type="xs:int" />
+              <xs:element name="Date_x0020_Due" msprop:Generator_ColumnVarNameInTable="columnDate_Due" msprop:Generator_ColumnPropNameInRow="Date_Due" msprop:Generator_ColumnPropNameInTable="Date_DueColumn" msprop:Generator_UserColumnName="Date Due">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Days_x0020_Overdue" msprop:Generator_ColumnVarNameInTable="columnDays_Overdue" msprop:Generator_ColumnPropNameInRow="Days_Overdue" msprop:Generator_ColumnPropNameInTable="Days_OverdueColumn" msprop:Generator_UserColumnName="Days Overdue" type="xs:int" />
+              <xs:element name="Late_x0020_Fees" msprop:Generator_ColumnVarNameInTable="columnLate_Fees" msprop:Generator_ColumnPropNameInRow="Late_Fees" msprop:Generator_ColumnPropNameInTable="Late_FeesColumn" msprop:Generator_UserColumnName="Late Fees" type="xs:decimal" />
+              <xs:element name="Total_x0020_Overdue" msprop:Generator_ColumnVarNameInTable="columnTotal_Overdue" msprop:Generator_ColumnPropNameInRow="Total_Overdue" msprop:Generator_ColumnPropNameInTable="Total_OverdueColumn" msprop:Generator_UserColumnName="Total Overdue" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

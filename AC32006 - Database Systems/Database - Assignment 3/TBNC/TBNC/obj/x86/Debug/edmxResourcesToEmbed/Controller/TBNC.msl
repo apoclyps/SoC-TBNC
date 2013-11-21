@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ac3d16ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="absences">
+      <EntityTypeMapping TypeName="ac3d16Model.absence">
+        <MappingFragment StoreEntitySet="absence">
+          <ScalarProperty Name="AbsenceID" ColumnName="AbsenceID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="AbsenceDate" ColumnName="AbsenceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="ac3d16Model.address">
+        <MappingFragment StoreEntitySet="address">
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="AddressLine" ColumnName="AddressLine" />
+          <ScalarProperty Name="AddressLineTwo" ColumnName="AddressLineTwo" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attendances">
+      <EntityTypeMapping TypeName="ac3d16Model.attendance">
+        <MappingFragment StoreEntitySet="attendance">
+          <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="FeeID" ColumnName="FeeID" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="WeekStart" ColumnName="WeekStart" />
+          <ScalarProperty Name="Teas" ColumnName="Teas" />
+          <ScalarProperty Name="Monday" ColumnName="Monday" />
+          <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+          <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+          <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+          <ScalarProperty Name="Friday" ColumnName="Friday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="children">
+      <EntityTypeMapping TypeName="ac3d16Model.child">
+        <MappingFragment StoreEntitySet="child">
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="LeavingDate" ColumnName="LeavingDate" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="childemergencycontacts">
+      <EntityTypeMapping TypeName="ac3d16Model.childemergencycontact">
+        <MappingFragment StoreEntitySet="childemergencycontact">
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="EmergencyContactID" ColumnName="EmergencyContactID" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="childparents">
+      <EntityTypeMapping TypeName="ac3d16Model.childparent">
+        <MappingFragment StoreEntitySet="childparent">
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="consents">
+      <EntityTypeMapping TypeName="ac3d16Model.consent">
+        <MappingFragment StoreEntitySet="consent">
+          <ScalarProperty Name="ConsentID" ColumnName="ConsentID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="NurseryPolicies" ColumnName="NurseryPolicies" />
+          <ScalarProperty Name="NurseryPoliciesDate" ColumnName="NurseryPoliciesDate" />
+          <ScalarProperty Name="AdministerCapol" ColumnName="AdministerCapol" />
+          <ScalarProperty Name="AdministerCapolDate" ColumnName="AdministerCapolDate" />
+          <ScalarProperty Name="ApplySunCream" ColumnName="ApplySunCream" />
+          <ScalarProperty Name="ApplySunCreamDate" ColumnName="ApplySunCreamDate" />
+          <ScalarProperty Name="CoachTrips" ColumnName="CoachTrips" />
+          <ScalarProperty Name="NurseryPhotos" ColumnName="NurseryPhotos" />
+          <ScalarProperty Name="PhotosTaken" ColumnName="PhotosTaken" />
+          <ScalarProperty Name="PublicTransport" ColumnName="PublicTransport" />
+          <ScalarProperty Name="PublicityPhoto" ColumnName="PublicityPhoto" />
+          <ScalarProperty Name="ReceiveMedicalTreatmentDate" ColumnName="ReceiveMedicalTreatmentDate" />
+          <ScalarProperty Name="RecieveMedicalTreatment" ColumnName="RecieveMedicalTreatment" />
+          <ScalarProperty Name="ReportPhoto" ColumnName="ReportPhoto" />
+          <ScalarProperty Name="Walks" ColumnName="Walks" />
+          <ScalarProperty Name="WebsitePhotos" ColumnName="WebsitePhotos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deposits">
+      <EntityTypeMapping TypeName="ac3d16Model.deposit">
+        <MappingFragment StoreEntitySet="deposit">
+          <ScalarProperty Name="DepositID" ColumnName="DepositID" />
+          <ScalarProperty Name="DepositPaid" ColumnName="DepositPaid" />
+          <ScalarProperty Name="DepositReturned" ColumnName="DepositReturned" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DepositPaidDate" ColumnName="DepositPaidDate" />
+          <ScalarProperty Name="DepositRefundedDate" ColumnName="DepositRefundedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doctors">
+      <EntityTypeMapping TypeName="ac3d16Model.doctor">
+        <MappingFragment StoreEntitySet="doctor">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emergencycontacts">
+      <EntityTypeMapping TypeName="ac3d16Model.emergencycontact">
+        <MappingFragment StoreEntitySet="emergencycontact">
+          <ScalarProperty Name="EmergencyContactID" ColumnName="EmergencyContactID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monthlyfees">
+      <EntityTypeMapping TypeName="ac3d16Model.monthlyfee">
+        <MappingFragment StoreEntitySet="monthlyfee">
+          <ScalarProperty Name="FeeID" ColumnName="FeeID" />
+          <ScalarProperty Name="DateCharged" ColumnName="DateCharged" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monthlyinvoices">
+      <EntityTypeMapping TypeName="ac3d16Model.monthlyinvoice">
+        <MappingFragment StoreEntitySet="monthlyinvoice">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="FeeID" ColumnName="FeeID" />
+          <ScalarProperty Name="VoucherSchemeID" ColumnName="VoucherSchemeID" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="LateFees" ColumnName="LateFees" />
+          <ScalarProperty Name="Outstanding" ColumnName="Outstanding" />
+          <ScalarProperty Name="Deductions" ColumnName="Deductions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parents">
+      <EntityTypeMapping TypeName="ac3d16Model.parent">
+        <MappingFragment StoreEntitySet="parent">
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="HomeTelephone" ColumnName="HomeTelephone" />
+          <ScalarProperty Name="WorkTelephone" ColumnName="WorkTelephone" />
+          <ScalarProperty Name="MobileTelephone" ColumnName="MobileTelephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NamedKnownatWork" ColumnName="NamedKnownatWork" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paymenthistories">
+      <EntityTypeMapping TypeName="ac3d16Model.paymenthistory">
+        <MappingFragment StoreEntitySet="paymenthistory">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="DateDue" ColumnName="DateDue" />
+          <ScalarProperty Name="AmountDue" ColumnName="AmountDue" />
+          <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registers">
+      <EntityTypeMapping TypeName="ac3d16Model.register">
+        <MappingFragment StoreEntitySet="register">
+          <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="ConsentID" ColumnName="ConsentID" />
+          <ScalarProperty Name="DepositID" ColumnName="DepositID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="PlacementType" ColumnName="PlacementType" />
+          <ScalarProperty Name="PreferedStartDate" ColumnName="PreferedStartDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rooms">
+      <EntityTypeMapping TypeName="ac3d16Model.room">
+        <MappingFragment StoreEntitySet="room">
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="DailyCharge" ColumnName="DailyCharge" />
+          <ScalarProperty Name="WeeklyCharge" ColumnName="WeeklyCharge" />
+          <ScalarProperty Name="TeaCharge" ColumnName="TeaCharge" />
+          <ScalarProperty Name="RoomVacancy" ColumnName="RoomVacancy" />
+          <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+          <ScalarProperty Name="StaffRatio" ColumnName="StaffRatio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voucherschemeproviders">
+      <EntityTypeMapping TypeName="ac3d16Model.voucherschemeprovider">
+        <MappingFragment StoreEntitySet="voucherschemeprovider">
+          <ScalarProperty Name="VoucherSchemeProviderId" ColumnName="VoucherSchemeProviderId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="voucherschemeregisters">
+      <EntityTypeMapping TypeName="ac3d16Model.voucherschemeregister">
+        <MappingFragment StoreEntitySet="voucherschemeregister">
+          <ScalarProperty Name="VoucherSchemeID" ColumnName="VoucherSchemeID" />
+          <ScalarProperty Name="VoucherSchemeProviderId" ColumnName="VoucherSchemeProviderId" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="IntendedStartDate" ColumnName="IntendedStartDate" />
+          <ScalarProperty Name="RegisteredWithCouncil" ColumnName="RegisteredWithCouncil" />
+          <ScalarProperty Name="DateSigned" ColumnName="DateSigned" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

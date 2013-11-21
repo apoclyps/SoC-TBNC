@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_12ac3d16DataSet8" targetNamespace="http://tempuri.org/_12ac3d16DataSet8.xsd" xmlns:mstns="http://tempuri.org/_12ac3d16DataSet8.xsd" xmlns="http://tempuri.org/_12ac3d16DataSet8.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_12ac3d16ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_12ac3d16ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default._12ac3d16ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="monthlyinvoicedetailsTableAdapter" GeneratorDataComponentClassName="monthlyinvoicedetailsTableAdapter" Name="monthlyinvoicedetails" UserDataComponentName="monthlyinvoicedetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_12ac3d16ConnectionString (Settings)" DbObjectName="`12ac3d16`.monthlyinvoicedetails" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Child Name`, `Placement Type`, `Room Name`, `Daily Charge`, `Weekly Charge`, `Teas`, `Tea Charge`, `Discount`, `Pay Date`, `Late Fees` FROM `12ac3d16`.`monthlyinvoicedetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Child Name" DataSetColumn="Child Name" />
+              <Mapping SourceColumn="Placement Type" DataSetColumn="Placement Type" />
+              <Mapping SourceColumn="Room Name" DataSetColumn="Room Name" />
+              <Mapping SourceColumn="Daily Charge" DataSetColumn="Daily Charge" />
+              <Mapping SourceColumn="Weekly Charge" DataSetColumn="Weekly Charge" />
+              <Mapping SourceColumn="Teas" DataSetColumn="Teas" />
+              <Mapping SourceColumn="Tea Charge" DataSetColumn="Tea Charge" />
+              <Mapping SourceColumn="Discount" DataSetColumn="Discount" />
+              <Mapping SourceColumn="Pay Date" DataSetColumn="Pay Date" />
+              <Mapping SourceColumn="Late Fees" DataSetColumn="Late Fees" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_12ac3d16DataSet8" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_12ac3d16DataSet8" msprop:Generator_UserDSName="_12ac3d16DataSet8">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="monthlyinvoicedetails" msprop:Generator_TableClassName="monthlyinvoicedetailsDataTable" msprop:Generator_TableVarName="tablemonthlyinvoicedetails" msprop:Generator_TablePropName="monthlyinvoicedetails" msprop:Generator_RowDeletingName="monthlyinvoicedetailsRowDeleting" msprop:Generator_UserTableName="monthlyinvoicedetails" msprop:Generator_RowChangingName="monthlyinvoicedetailsRowChanging" msprop:Generator_RowEvHandlerName="monthlyinvoicedetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="monthlyinvoicedetailsRowDeleted" msprop:Generator_RowEvArgName="monthlyinvoicedetailsRowChangeEvent" msprop:Generator_RowChangedName="monthlyinvoicedetailsRowChanged" msprop:Generator_RowClassName="monthlyinvoicedetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Child_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnChild_Name" msprop:Generator_ColumnPropNameInRow="Child_Name" msprop:Generator_ColumnPropNameInTable="Child_NameColumn" msprop:Generator_UserColumnName="Child Name" type="xs:int" />
+              <xs:element name="Placement_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnPlacement_Type" msprop:Generator_ColumnPropNameInRow="Placement_Type" msprop:Generator_ColumnPropNameInTable="Placement_TypeColumn" msprop:Generator_UserColumnName="Placement Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnRoom_Name" msprop:Generator_ColumnPropNameInRow="Room_Name" msprop:Generator_ColumnPropNameInTable="Room_NameColumn" msprop:Generator_UserColumnName="Room Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Daily_x0020_Charge" msprop:Generator_ColumnVarNameInTable="columnDaily_Charge" msprop:Generator_ColumnPropNameInRow="Daily_Charge" msprop:Generator_ColumnPropNameInTable="Daily_ChargeColumn" msprop:Generator_UserColumnName="Daily Charge" type="xs:decimal" />
+              <xs:element name="Weekly_x0020_Charge" msprop:Generator_ColumnVarNameInTable="columnWeekly_Charge" msprop:Generator_ColumnPropNameInRow="Weekly_Charge" msprop:Generator_ColumnPropNameInTable="Weekly_ChargeColumn" msprop:Generator_UserColumnName="Weekly Charge" type="xs:decimal" />
+              <xs:element name="Teas" msprop:Generator_ColumnVarNameInTable="columnTeas" msprop:Generator_ColumnPropNameInRow="Teas" msprop:Generator_ColumnPropNameInTable="TeasColumn" msprop:Generator_UserColumnName="Teas" type="xs:unsignedByte" />
+              <xs:element name="Tea_x0020_Charge" msprop:Generator_ColumnVarNameInTable="columnTea_Charge" msprop:Generator_ColumnPropNameInRow="Tea_Charge" msprop:Generator_ColumnPropNameInTable="Tea_ChargeColumn" msprop:Generator_UserColumnName="Tea Charge" type="xs:decimal" />
+              <xs:element name="Discount" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_UserColumnName="Discount" type="xs:decimal" />
+              <xs:element name="Pay_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnPay_Date" msprop:Generator_ColumnPropNameInRow="Pay_Date" msprop:Generator_ColumnPropNameInTable="Pay_DateColumn" msprop:Generator_UserColumnName="Pay Date" type="xs:dateTime" />
+              <xs:element name="Late_x0020_Fees" msprop:Generator_ColumnVarNameInTable="columnLate_Fees" msprop:Generator_ColumnPropNameInRow="Late_Fees" msprop:Generator_ColumnPropNameInTable="Late_FeesColumn" msprop:Generator_UserColumnName="Late Fees" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

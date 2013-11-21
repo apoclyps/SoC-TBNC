@@ -1,0 +1,12 @@
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\bin\Debug\TBNC.exe
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\bin\Debug\TBNC.pdb
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\TBNC.Login.resources
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\TBNC.Properties.Resources.resources
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\TBNC.exe
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\TBNC.pdb
+c:\users\kyle\documents\visual studio 2010\Projects\TBNC\TBNC\bin\Debug\TBNC.exe.config
+C:\Users\Kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\TBNC.Child.resources
+C:\Users\Kyle\documents\visual studio 2010\Projects\TBNC\TBNC\obj\x86\Debug\TBNC.Home.resources

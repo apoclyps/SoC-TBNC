@@ -1,0 +1,7 @@
+AddressID,Text,Masked String,\A\0\0\099
+AddressLine,Human,Street Address
+AddressLine2,Human,Street Address
+City,Human,City
+County,Human,State,-1
+Postcode,Human,UK Postcode
+Country,Human,Country

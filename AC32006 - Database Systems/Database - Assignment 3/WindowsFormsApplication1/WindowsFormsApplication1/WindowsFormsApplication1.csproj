@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63B97357-7774-498E-96E7-E211764981CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_12ac3d16DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_12ac3d16DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_12ac3d16DataSet8.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_12ac3d16DataSet.xsc">
+      <DependentUpon>_12ac3d16DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet.xss">
+      <DependentUpon>_12ac3d16DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet1.xsc">
+      <DependentUpon>_12ac3d16DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet1.xss">
+      <DependentUpon>_12ac3d16DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet2.xsc">
+      <DependentUpon>_12ac3d16DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet2.xss">
+      <DependentUpon>_12ac3d16DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet3.xsc">
+      <DependentUpon>_12ac3d16DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet3.xss">
+      <DependentUpon>_12ac3d16DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet4.xsc">
+      <DependentUpon>_12ac3d16DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet4.xss">
+      <DependentUpon>_12ac3d16DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet5.xsc">
+      <DependentUpon>_12ac3d16DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet5.xss">
+      <DependentUpon>_12ac3d16DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet6.xsc">
+      <DependentUpon>_12ac3d16DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet6.xss">
+      <DependentUpon>_12ac3d16DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet7.xsc">
+      <DependentUpon>_12ac3d16DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet7.xss">
+      <DependentUpon>_12ac3d16DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet8.xsc">
+      <DependentUpon>_12ac3d16DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="_12ac3d16DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_12ac3d16DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_12ac3d16DataSet8.xss">
+      <DependentUpon>_12ac3d16DataSet8.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\background.jpg" />
+    <Content Include="Properties\logo.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

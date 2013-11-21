@@ -1,0 +1,5 @@
+RoomName,Set,From Fixed List,Baby Room|Daisy’s Discoverers|None|Oakley’s Explorers|Panda Room|Polar Room|Teddy’s Transformers
+DailyCharge,Numbers,Real,1|15.99|2
+WeeklyCharge,Numbers,Real,40|99.99|2
+TeaCharge,Numbers,Real,1|6.5|2
+RoomVacancy,Numbers,Integer,0|30

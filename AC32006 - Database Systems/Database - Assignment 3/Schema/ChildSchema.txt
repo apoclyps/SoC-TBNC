@@ -1,0 +1,8 @@
+ChildID,Text,Masked String,\C\0\0999
+FirstName,Human,First Name,-1|-1
+Surname,Human,Last Name,-1|-1
+DOB,Time,Date (yyyy-mm-dd),39083|41275|3|0
+StartDate,Time,Date (yyyy-mm-dd),39083|41275|3|0
+LeavingData,Time,Date (yyyy-mm-dd),39083|41275|3|0
+RoomName,Set,From Fixed List,Baby Room|Daisy’s Discoverers|None|Oakley’s Explorers|Panda Room|Polar Room|Teddy’s Transformers
+AddressID,Text,Masked String,\a\0\0\099

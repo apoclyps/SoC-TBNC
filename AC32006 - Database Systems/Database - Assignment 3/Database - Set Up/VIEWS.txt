@@ -1,0 +1,126 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `12ac3u16`@`%` 
+    SQL SECURITY DEFINER
+VIEW `individualchilddetails` AS
+    select 
+        `child`.`ChildID` AS `ChildID`,
+        `child`.`FirstName` AS `Firstname`,
+        `child`.`Surname` AS `Surname`,
+        `child`.`DOB` AS `DOB`,
+        `child`.`StartDate` AS `StartDate`,
+        `child`.`LeavingDate` AS `LeavingDate`,
+        `child`.`RoomName` AS `RoomName`
+    from
+        `child`
+    group by `child`.`FirstName`
+    order by `child`.`ChildID` desc
+	
+	--------
+	
+	CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `12ac3u16`@`%` 
+    SQL SECURITY DEFINER
+VIEW `monthlyfeedetails1` AS
+    select 
+        (`child`.`FirstName` or `child`.`Surname`) AS `Child Name`,
+        `register`.`PlacementType` AS `Placement Type`,
+        `room`.`RoomName` AS `Room Name`,
+        `room`.`DailyCharge` AS `Daily Charge`,
+        `room`.`WeeklyCharge` AS `Weekly Charge`,
+        `attendance`.`Teas` AS `Teas`,
+        `room`.`TeaCharge` AS `Tea Charge`
+    from
+        (((`child`
+        join `register` ON ((`register`.`ChildID` = `child`.`ChildID`)))
+        join `attendance` ON ((`attendance`.`ChildID` = `child`.`ChildID`)))
+        join `room` ON ((`room`.`RoomName` = `child`.`RoomName`)))
+    order by `child`.`Surname` desc
+	
+	--------
+	
+	CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `12ac3u16`@`%` 
+    SQL SECURITY DEFINER
+VIEW `monthlyinvoicedetails` AS
+    select 
+        (`child`.`FirstName` or `child`.`Surname`) AS `Child Name`,
+        `register`.`PlacementType` AS `Placement Type`,
+        `room`.`RoomName` AS `Room Name`,
+        `room`.`DailyCharge` AS `Daily Charge`,
+        `room`.`WeeklyCharge` AS `Weekly Charge`,
+        `attendance`.`Teas` AS `Teas`,
+        `room`.`TeaCharge` AS `Tea Charge`,
+        `voucherschemeprovider`.`Discount` AS `Discount`,
+        `monthlyinvoice`.`PayDate` AS `Pay Date`,
+        `monthlyinvoice`.`LateFees` AS `Late Fees`
+    from
+        (((((((`child`
+        join `register` ON ((`register`.`ChildID` = `child`.`ChildID`)))
+        join `attendance` ON ((`attendance`.`ChildID` = `child`.`ChildID`)))
+        join `room` ON ((`room`.`RoomName` = `child`.`RoomName`)))
+        join `monthlyfee` ON ((`monthlyfee`.`ChildID` = `child`.`ChildID`)))
+        join `monthlyinvoice` ON ((`monthlyinvoice`.`FeeID` = `monthlyfee`.`FeeID`)))
+        join `voucherschemeregister` ON ((`voucherschemeregister`.`ChildID` = `child`.`ChildID`)))
+        join `voucherschemeprovider` ON ((`voucherschemeprovider`.`VoucherSchemeProviderId` = `voucherschemeregister`.`VoucherSchemeProviderId`)))
+    order by `child`.`Surname` desc
+	
+	
+	-------
+	
+	CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `12ac3u16`@`%` 
+    SQL SECURITY DEFINER
+VIEW `overduedetails1` AS
+    select 
+        (`child`.`FirstName` or `child`.`Surname`) AS `Child Name`,
+        `paymenthistory`.`DateDue` AS `Date Due`,
+        `monthlyinvoice`.`DaysOverdue` AS `Days Overdue`,
+        `monthlyinvoice`.`LateFees` AS `Late Fees`,
+        `monthlyinvoice`.`Overdue` AS `Total Overdue`
+    from
+        (((`child`
+        join `monthlyfee` ON ((`monthlyfee`.`ChildID` = `child`.`ChildID`)))
+        join `monthlyinvoice` ON ((`monthlyinvoice`.`FeeID` = `monthlyfee`.`FeeID`)))
+        join `paymenthistory` ON ((`monthlyinvoice`.`InvoiceID` = `paymenthistory`.`InvoiceID`)))
+    order by `child`.`Surname` desc
+	
+	
+	---------
+	
+	CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `12ac3u16`@`%` 
+    SQL SECURITY DEFINER
+VIEW `payhistorydetails` AS
+    select 
+        `paymenthistory`.`Payee` AS `Payee`,
+        `paymenthistory`.`Paid` AS `Paid`,
+        `paymenthistory`.`PaymentType` AS `Payment Type`,
+        `paymenthistory`.`DateDue` AS `Date Due`,
+        `paymenthistory`.`DatePaid` AS `Date Paid`,
+        `paymenthistory`.`AmountDue` AS `Amount Due`
+    from
+        `paymenthistory`
+    order by `paymenthistory`.`Payee` desc
+	
+	
+	--------
+	
+	
+	CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `12ac3u16`@`%` 
+    SQL SECURITY DEFINER
+VIEW `roomchangedetails` AS
+    select 
+        (`child`.`FirstName` or `child`.`Surname`) AS `Child Name`,
+        `child`.`RoomName` AS `Room Name`,
+        `room`.`RoomVacancy` AS `Room Vacancy`
+    from
+        (`child`
+        join `room` ON ((`room`.`RoomName` = `child`.`RoomName`)))
+    order by `child`.`Surname` desc

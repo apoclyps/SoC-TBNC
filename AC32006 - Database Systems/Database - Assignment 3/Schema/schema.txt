@@ -1,0 +1,8 @@
+ChildID,Text,Masked String,\C\0\0999
+FirstName,Human,First Name,-1|-1
+Surname,Human,Last Name,-1|-1
+DOB,Time,Date (yyyy-mm-dd),39083|41275|3|-1
+StartDate,Time,Date (yyyy-mm-dd),39083|41275|3|-1
+LeavingData,Time,Date (yyyy-mm-dd),39083|41275|3|-1
+RoomName,Set,From File,C:\Users\Apoclyps\Desktop\roomList.txt
+AddressID,Text,Masked String,\A\0\0\099

@@ -1,0 +1,1804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ac3d16Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ac3d16ModelStoreContainer">
+          <EntitySet Name="absence" EntityType="ac3d16Model.Store.absence" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="address" EntityType="ac3d16Model.Store.address" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="attendance" EntityType="ac3d16Model.Store.attendance" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="child" EntityType="ac3d16Model.Store.child" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="childemergencycontact" EntityType="ac3d16Model.Store.childemergencycontact" store:Type="Tables" store:Schema="12ac3d16" store:Name="childemergencycontact">
+            <DefiningQuery>SELECT
+      `childemergencycontact`.`ChildID`, 
+      `childemergencycontact`.`EmergencyContactID`, 
+      `childemergencycontact`.`Relationship`
+      FROM `childemergencycontact` AS `childemergencycontact`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="childparent" EntityType="ac3d16Model.Store.childparent" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="consent" EntityType="ac3d16Model.Store.consent" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="deposit" EntityType="ac3d16Model.Store.deposit" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="doctor" EntityType="ac3d16Model.Store.doctor" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="emergencycontact" EntityType="ac3d16Model.Store.emergencycontact" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="monthlyfee" EntityType="ac3d16Model.Store.monthlyfee" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="monthlyinvoice" EntityType="ac3d16Model.Store.monthlyinvoice" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="parent" EntityType="ac3d16Model.Store.parent" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="paymenthistory" EntityType="ac3d16Model.Store.paymenthistory" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="register" EntityType="ac3d16Model.Store.register" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="room" EntityType="ac3d16Model.Store.room" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="voucherschemeprovider" EntityType="ac3d16Model.Store.voucherschemeprovider" store:Type="Tables" Schema="12ac3d16" />
+          <EntitySet Name="voucherschemeregister" EntityType="ac3d16Model.Store.voucherschemeregister" store:Type="Tables" Schema="12ac3d16" />
+          <AssociationSet Name="Accredited" Association="ac3d16Model.Store.Accredited">
+            <End Role="parent" EntitySet="parent" />
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregister" />
+          </AssociationSet>
+          <AssociationSet Name="AccumulatedBy" Association="ac3d16Model.Store.AccumulatedBy">
+            <End Role="child" EntitySet="child" />
+            <End Role="monthlyfee" EntitySet="monthlyfee" />
+          </AssociationSet>
+          <AssociationSet Name="Attends" Association="ac3d16Model.Store.Attends">
+            <End Role="child" EntitySet="child" />
+            <End Role="attendance" EntitySet="attendance" />
+          </AssociationSet>
+          <AssociationSet Name="calculatedFrom" Association="ac3d16Model.Store.calculatedFrom">
+            <End Role="room" EntitySet="room" />
+            <End Role="monthlyfee" EntitySet="monthlyfee" />
+          </AssociationSet>
+          <AssociationSet Name="causes" Association="ac3d16Model.Store.causes">
+            <End Role="child" EntitySet="child" />
+            <End Role="absence" EntitySet="absence" />
+          </AssociationSet>
+          <AssociationSet Name="Discounts" Association="ac3d16Model.Store.Discounts">
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregister" />
+            <End Role="monthlyinvoice" EntitySet="monthlyinvoice" />
+          </AssociationSet>
+          <AssociationSet Name="Enrolls" Association="ac3d16Model.Store.Enrolls">
+            <End Role="child" EntitySet="child" />
+            <End Role="register" EntitySet="register" />
+          </AssociationSet>
+          <AssociationSet Name="Generates" Association="ac3d16Model.Store.Generates">
+            <End Role="monthlyfee" EntitySet="monthlyfee" />
+            <End Role="attendance" EntitySet="attendance" />
+          </AssociationSet>
+          <AssociationSet Name="GeneratesFee" Association="ac3d16Model.Store.GeneratesFee">
+            <End Role="monthlyfee" EntitySet="monthlyfee" />
+            <End Role="monthlyinvoice" EntitySet="monthlyinvoice" />
+          </AssociationSet>
+          <AssociationSet Name="LocatedIn" Association="ac3d16Model.Store.LocatedIn">
+            <End Role="room" EntitySet="room" />
+            <End Role="attendance" EntitySet="attendance" />
+          </AssociationSet>
+          <AssociationSet Name="Occupies" Association="ac3d16Model.Store.Occupies">
+            <End Role="room" EntitySet="room" />
+            <End Role="child" EntitySet="child" />
+          </AssociationSet>
+          <AssociationSet Name="OffspringOff" Association="ac3d16Model.Store.OffspringOff">
+            <End Role="child" EntitySet="child" />
+            <End Role="childparent" EntitySet="childparent" />
+          </AssociationSet>
+          <AssociationSet Name="PaidBy" Association="ac3d16Model.Store.PaidBy">
+            <End Role="parent" EntitySet="parent" />
+            <End Role="monthlyfee" EntitySet="monthlyfee" />
+          </AssociationSet>
+          <AssociationSet Name="PaymentBy" Association="ac3d16Model.Store.PaymentBy">
+            <End Role="parent" EntitySet="parent" />
+            <End Role="paymenthistory" EntitySet="paymenthistory" />
+          </AssociationSet>
+          <AssociationSet Name="PracticeAt" Association="ac3d16Model.Store.PracticeAt">
+            <End Role="address" EntitySet="address" />
+            <End Role="doctor" EntitySet="doctor" />
+          </AssociationSet>
+          <AssociationSet Name="Provides" Association="ac3d16Model.Store.Provides">
+            <End Role="voucherschemeprovider" EntitySet="voucherschemeprovider" />
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregister" />
+          </AssociationSet>
+          <AssociationSet Name="RegistedTo" Association="ac3d16Model.Store.RegistedTo">
+            <End Role="doctor" EntitySet="doctor" />
+            <End Role="consent" EntitySet="consent" />
+          </AssociationSet>
+          <AssociationSet Name="Requests" Association="ac3d16Model.Store.Requests">
+            <End Role="monthlyinvoice" EntitySet="monthlyinvoice" />
+            <End Role="paymenthistory" EntitySet="paymenthistory" />
+          </AssociationSet>
+          <AssociationSet Name="RequiredForEmergency" Association="ac3d16Model.Store.RequiredForEmergency">
+            <End Role="emergencycontact" EntitySet="emergencycontact" />
+            <End Role="childemergencycontact" EntitySet="childemergencycontact" />
+          </AssociationSet>
+          <AssociationSet Name="Requires" Association="ac3d16Model.Store.Requires">
+            <End Role="address" EntitySet="address" />
+            <End Role="emergencycontact" EntitySet="emergencycontact" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresConsent" Association="ac3d16Model.Store.RequiresConsent">
+            <End Role="consent" EntitySet="consent" />
+            <End Role="register" EntitySet="register" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresContact" Association="ac3d16Model.Store.RequiresContact">
+            <End Role="child" EntitySet="child" />
+            <End Role="childemergencycontact" EntitySet="childemergencycontact" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresDeposit" Association="ac3d16Model.Store.RequiresDeposit">
+            <End Role="deposit" EntitySet="deposit" />
+            <End Role="register" EntitySet="register" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresDoctor" Association="ac3d16Model.Store.RequiresDoctor">
+            <End Role="doctor" EntitySet="doctor" />
+            <End Role="register" EntitySet="register" />
+          </AssociationSet>
+          <AssociationSet Name="ResidesAt" Association="ac3d16Model.Store.ResidesAt">
+            <End Role="address" EntitySet="address" />
+            <End Role="child" EntitySet="child" />
+          </AssociationSet>
+          <AssociationSet Name="ResponsibleFor" Association="ac3d16Model.Store.ResponsibleFor">
+            <End Role="parent" EntitySet="parent" />
+            <End Role="childparent" EntitySet="childparent" />
+          </AssociationSet>
+          <AssociationSet Name="Uses" Association="ac3d16Model.Store.Uses">
+            <End Role="child" EntitySet="child" />
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregister" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="absence">
+          <Key>
+            <PropertyRef Name="AbsenceID" />
+          </Key>
+          <Property Name="AbsenceID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ChildID" Type="varchar" MaxLength="6" />
+          <Property Name="AbsenceDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Name="AddressID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="AddressLine" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AddressLineTwo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="City" Type="varchar" Nullable="false" MaxLength="35" />
+          <Property Name="County" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Postcode" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Country" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="attendance">
+          <Key>
+            <PropertyRef Name="AttendanceID" />
+          </Key>
+          <Property Name="AttendanceID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ChildID" Type="varchar" MaxLength="6" />
+          <Property Name="FeeID" Type="varchar" MaxLength="6" />
+          <Property Name="RoomName" Type="enum" Nullable="false" />
+          <Property Name="WeekStart" Type="date" Nullable="false" />
+          <Property Name="Teas" Type="utinyint" Nullable="false" />
+          <Property Name="Monday" Type="bit" Nullable="false" />
+          <Property Name="Tuesday" Type="bit" Nullable="false" />
+          <Property Name="Wednesday" Type="bit" Nullable="false" />
+          <Property Name="Thursday" Type="bit" Nullable="false" />
+          <Property Name="Friday" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="child">
+          <Key>
+            <PropertyRef Name="ChildID" />
+          </Key>
+          <Property Name="ChildID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="LeavingDate" Type="date" />
+          <Property Name="RoomName" Type="enum" Nullable="false" />
+          <Property Name="AddressID" Type="varchar" Nullable="false" MaxLength="6" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view '12ac3d16.childemergencycontact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="childemergencycontact">
+          <Key>
+            <PropertyRef Name="ChildID" />
+            <PropertyRef Name="EmergencyContactID" />
+          </Key>
+          <Property Name="ChildID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="EmergencyContactID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Relationship" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="childparent">
+          <Key>
+            <PropertyRef Name="ChildID" />
+            <PropertyRef Name="ParentID" />
+          </Key>
+          <Property Name="ChildID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ParentID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Relationship" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="consent">
+          <Key>
+            <PropertyRef Name="ConsentID" />
+          </Key>
+          <Property Name="ConsentID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="DoctorID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="NurseryPolicies" Type="bit" Nullable="false" />
+          <Property Name="NurseryPoliciesDate" Type="date" Nullable="false" />
+          <Property Name="AdministerCapol" Type="bit" Nullable="false" />
+          <Property Name="AdministerCapolDate" Type="date" Nullable="false" />
+          <Property Name="ApplySunCream" Type="bit" Nullable="false" />
+          <Property Name="ApplySunCreamDate" Type="date" Nullable="false" />
+          <Property Name="CoachTrips" Type="bit" Nullable="false" />
+          <Property Name="NurseryPhotos" Type="bit" Nullable="false" />
+          <Property Name="PhotosTaken" Type="bit" Nullable="false" />
+          <Property Name="PublicTransport" Type="bit" Nullable="false" />
+          <Property Name="PublicityPhoto" Type="bit" Nullable="false" />
+          <Property Name="ReceiveMedicalTreatmentDate" Type="date" Nullable="false" />
+          <Property Name="RecieveMedicalTreatment" Type="bit" Nullable="false" />
+          <Property Name="ReportPhoto" Type="bit" Nullable="false" />
+          <Property Name="Walks" Type="bit" Nullable="false" />
+          <Property Name="WebsitePhotos" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="deposit">
+          <Key>
+            <PropertyRef Name="DepositID" />
+          </Key>
+          <Property Name="DepositID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="DepositPaid" Type="bit" Nullable="false" />
+          <Property Name="DepositReturned" Type="bit" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="DepositPaidDate" Type="date" Nullable="false" />
+          <Property Name="DepositRefundedDate" Type="date" />
+        </EntityType>
+        <EntityType Name="doctor">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AddressID" Type="varchar" Nullable="false" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="emergencycontact">
+          <Key>
+            <PropertyRef Name="EmergencyContactID" />
+          </Key>
+          <Property Name="EmergencyContactID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AddressID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="HomePhone" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="MobilePhone" Type="varchar" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="monthlyfee">
+          <Key>
+            <PropertyRef Name="FeeID" />
+          </Key>
+          <Property Name="FeeID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="DateCharged" Type="date" Nullable="false" />
+          <Property Name="ChildID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ParentID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="RoomName" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="monthlyinvoice">
+          <Key>
+            <PropertyRef Name="InvoiceID" />
+          </Key>
+          <Property Name="InvoiceID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="FeeID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="VoucherSchemeID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="PayDate" Type="date" Nullable="false" />
+          <Property Name="LateFees" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="Outstanding" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="Deductions" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
+        <EntityType Name="parent">
+          <Key>
+            <PropertyRef Name="ParentID" />
+          </Key>
+          <Property Name="ParentID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Title" Type="varchar" Nullable="false" MaxLength="35" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="HomeTelephone" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="WorkTelephone" Type="varchar" MaxLength="11" />
+          <Property Name="MobileTelephone" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="Email" Type="varchar" MaxLength="75" />
+          <Property Name="NamedKnownatWork" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="paymenthistory">
+          <Key>
+            <PropertyRef Name="PaymentID" />
+          </Key>
+          <Property Name="PaymentID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="InvoiceID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ParentID" Type="varchar" MaxLength="6" />
+          <Property Name="Paid" Type="bit" Nullable="false" />
+          <Property Name="PaymentType" Type="enum" Nullable="false" />
+          <Property Name="DateDue" Type="date" Nullable="false" />
+          <Property Name="AmountDue" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="DatePaid" Type="date" />
+        </EntityType>
+        <EntityType Name="register">
+          <Key>
+            <PropertyRef Name="RegisterID" />
+          </Key>
+          <Property Name="RegisterID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ChildID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ConsentID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="DepositID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="DoctorID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="PlacementType" Type="enum" Nullable="false" />
+          <Property Name="PreferedStartDate" Type="date" />
+        </EntityType>
+        <EntityType Name="room">
+          <Key>
+            <PropertyRef Name="RoomName" />
+          </Key>
+          <Property Name="RoomName" Type="enum" Nullable="false" />
+          <Property Name="DailyCharge" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="WeeklyCharge" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TeaCharge" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="RoomVacancy" Type="utinyint" Nullable="false" />
+          <Property Name="AgeGroup" Type="enum" Nullable="false" />
+          <Property Name="StaffRatio" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="voucherschemeprovider">
+          <Key>
+            <PropertyRef Name="VoucherSchemeProviderId" />
+          </Key>
+          <Property Name="VoucherSchemeProviderId" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Discount" Type="decimal" Nullable="false" Precision="4" Scale="3" />
+        </EntityType>
+        <EntityType Name="voucherschemeregister">
+          <Key>
+            <PropertyRef Name="VoucherSchemeID" />
+          </Key>
+          <Property Name="VoucherSchemeID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="VoucherSchemeProviderId" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ChildID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="ParentID" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="IntendedStartDate" Type="date" Nullable="false" />
+          <Property Name="RegisteredWithCouncil" Type="bit" Nullable="false" />
+          <Property Name="DateSigned" Type="date" Nullable="false" />
+        </EntityType>
+        <Association Name="Accredited">
+          <End Role="parent" Type="ac3d16Model.Store.parent" Multiplicity="1" />
+          <End Role="voucherschemeregister" Type="ac3d16Model.Store.voucherschemeregister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="voucherschemeregister">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AccumulatedBy">
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="1" />
+          <End Role="monthlyfee" Type="ac3d16Model.Store.monthlyfee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="monthlyfee">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Attends">
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="0..1" />
+          <End Role="attendance" Type="ac3d16Model.Store.attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="attendance">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="calculatedFrom">
+          <End Role="room" Type="ac3d16Model.Store.room" Multiplicity="1" />
+          <End Role="monthlyfee" Type="ac3d16Model.Store.monthlyfee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room">
+              <PropertyRef Name="RoomName" />
+            </Principal>
+            <Dependent Role="monthlyfee">
+              <PropertyRef Name="RoomName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="causes">
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="0..1" />
+          <End Role="absence" Type="ac3d16Model.Store.absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="absence">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Discounts">
+          <End Role="voucherschemeregister" Type="ac3d16Model.Store.voucherschemeregister" Multiplicity="1" />
+          <End Role="monthlyinvoice" Type="ac3d16Model.Store.monthlyinvoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="voucherschemeregister">
+              <PropertyRef Name="VoucherSchemeID" />
+            </Principal>
+            <Dependent Role="monthlyinvoice">
+              <PropertyRef Name="VoucherSchemeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Enrolls">
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.Store.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Generates">
+          <End Role="monthlyfee" Type="ac3d16Model.Store.monthlyfee" Multiplicity="0..1" />
+          <End Role="attendance" Type="ac3d16Model.Store.attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="monthlyfee">
+              <PropertyRef Name="FeeID" />
+            </Principal>
+            <Dependent Role="attendance">
+              <PropertyRef Name="FeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GeneratesFee">
+          <End Role="monthlyfee" Type="ac3d16Model.Store.monthlyfee" Multiplicity="1" />
+          <End Role="monthlyinvoice" Type="ac3d16Model.Store.monthlyinvoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="monthlyfee">
+              <PropertyRef Name="FeeID" />
+            </Principal>
+            <Dependent Role="monthlyinvoice">
+              <PropertyRef Name="FeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LocatedIn">
+          <End Role="room" Type="ac3d16Model.Store.room" Multiplicity="1" />
+          <End Role="attendance" Type="ac3d16Model.Store.attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room">
+              <PropertyRef Name="RoomName" />
+            </Principal>
+            <Dependent Role="attendance">
+              <PropertyRef Name="RoomName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Occupies">
+          <End Role="room" Type="ac3d16Model.Store.room" Multiplicity="1" />
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room">
+              <PropertyRef Name="RoomName" />
+            </Principal>
+            <Dependent Role="child">
+              <PropertyRef Name="RoomName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="OffspringOff">
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="1" />
+          <End Role="childparent" Type="ac3d16Model.Store.childparent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="childparent">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PaidBy">
+          <End Role="parent" Type="ac3d16Model.Store.parent" Multiplicity="1" />
+          <End Role="monthlyfee" Type="ac3d16Model.Store.monthlyfee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="monthlyfee">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PaymentBy">
+          <End Role="parent" Type="ac3d16Model.Store.parent" Multiplicity="0..1" />
+          <End Role="paymenthistory" Type="ac3d16Model.Store.paymenthistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="paymenthistory">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PracticeAt">
+          <End Role="address" Type="ac3d16Model.Store.address" Multiplicity="1" />
+          <End Role="doctor" Type="ac3d16Model.Store.doctor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="doctor">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Provides">
+          <End Role="voucherschemeprovider" Type="ac3d16Model.Store.voucherschemeprovider" Multiplicity="1" />
+          <End Role="voucherschemeregister" Type="ac3d16Model.Store.voucherschemeregister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="voucherschemeprovider">
+              <PropertyRef Name="VoucherSchemeProviderId" />
+            </Principal>
+            <Dependent Role="voucherschemeregister">
+              <PropertyRef Name="VoucherSchemeProviderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RegistedTo">
+          <End Role="doctor" Type="ac3d16Model.Store.doctor" Multiplicity="1" />
+          <End Role="consent" Type="ac3d16Model.Store.consent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="consent">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Requests">
+          <End Role="monthlyinvoice" Type="ac3d16Model.Store.monthlyinvoice" Multiplicity="1" />
+          <End Role="paymenthistory" Type="ac3d16Model.Store.paymenthistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="monthlyinvoice">
+              <PropertyRef Name="InvoiceID" />
+            </Principal>
+            <Dependent Role="paymenthistory">
+              <PropertyRef Name="InvoiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiredForEmergency">
+          <End Role="emergencycontact" Type="ac3d16Model.Store.emergencycontact" Multiplicity="1" />
+          <End Role="childemergencycontact" Type="ac3d16Model.Store.childemergencycontact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="emergencycontact">
+              <PropertyRef Name="EmergencyContactID" />
+            </Principal>
+            <Dependent Role="childemergencycontact">
+              <PropertyRef Name="EmergencyContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Requires">
+          <End Role="address" Type="ac3d16Model.Store.address" Multiplicity="1" />
+          <End Role="emergencycontact" Type="ac3d16Model.Store.emergencycontact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="emergencycontact">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresConsent">
+          <End Role="consent" Type="ac3d16Model.Store.consent" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.Store.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="consent">
+              <PropertyRef Name="ConsentID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="ConsentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresContact">
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="1" />
+          <End Role="childemergencycontact" Type="ac3d16Model.Store.childemergencycontact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="childemergencycontact">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresDeposit">
+          <End Role="deposit" Type="ac3d16Model.Store.deposit" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.Store.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deposit">
+              <PropertyRef Name="DepositID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="DepositID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresDoctor">
+          <End Role="doctor" Type="ac3d16Model.Store.doctor" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.Store.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ResidesAt">
+          <End Role="address" Type="ac3d16Model.Store.address" Multiplicity="1" />
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="child">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ResponsibleFor">
+          <End Role="parent" Type="ac3d16Model.Store.parent" Multiplicity="1" />
+          <End Role="childparent" Type="ac3d16Model.Store.childparent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="childparent">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Uses">
+          <End Role="child" Type="ac3d16Model.Store.child" Multiplicity="1" />
+          <End Role="voucherschemeregister" Type="ac3d16Model.Store.voucherschemeregister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="voucherschemeregister">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ac3d16Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="absences" EntityType="ac3d16Model.absence" />
+          <EntitySet Name="addresses" EntityType="ac3d16Model.address" />
+          <EntitySet Name="attendances" EntityType="ac3d16Model.attendance" />
+          <EntitySet Name="children" EntityType="ac3d16Model.child" />
+          <EntitySet Name="childemergencycontacts" EntityType="ac3d16Model.childemergencycontact" />
+          <EntitySet Name="childparents" EntityType="ac3d16Model.childparent" />
+          <EntitySet Name="consents" EntityType="ac3d16Model.consent" />
+          <EntitySet Name="deposits" EntityType="ac3d16Model.deposit" />
+          <EntitySet Name="doctors" EntityType="ac3d16Model.doctor" />
+          <EntitySet Name="emergencycontacts" EntityType="ac3d16Model.emergencycontact" />
+          <EntitySet Name="monthlyfees" EntityType="ac3d16Model.monthlyfee" />
+          <EntitySet Name="monthlyinvoices" EntityType="ac3d16Model.monthlyinvoice" />
+          <EntitySet Name="parents" EntityType="ac3d16Model.parent" />
+          <EntitySet Name="paymenthistories" EntityType="ac3d16Model.paymenthistory" />
+          <EntitySet Name="registers" EntityType="ac3d16Model.register" />
+          <EntitySet Name="rooms" EntityType="ac3d16Model.room" />
+          <EntitySet Name="voucherschemeproviders" EntityType="ac3d16Model.voucherschemeprovider" />
+          <EntitySet Name="voucherschemeregisters" EntityType="ac3d16Model.voucherschemeregister" />
+          <AssociationSet Name="causes" Association="ac3d16Model.causes">
+            <End Role="child" EntitySet="children" />
+            <End Role="absence" EntitySet="absences" />
+          </AssociationSet>
+          <AssociationSet Name="PracticeAt" Association="ac3d16Model.PracticeAt">
+            <End Role="address" EntitySet="addresses" />
+            <End Role="doctor" EntitySet="doctors" />
+          </AssociationSet>
+          <AssociationSet Name="Requires" Association="ac3d16Model.Requires">
+            <End Role="address" EntitySet="addresses" />
+            <End Role="emergencycontact" EntitySet="emergencycontacts" />
+          </AssociationSet>
+          <AssociationSet Name="ResidesAt" Association="ac3d16Model.ResidesAt">
+            <End Role="address" EntitySet="addresses" />
+            <End Role="child" EntitySet="children" />
+          </AssociationSet>
+          <AssociationSet Name="Attends" Association="ac3d16Model.Attends">
+            <End Role="child" EntitySet="children" />
+            <End Role="attendance" EntitySet="attendances" />
+          </AssociationSet>
+          <AssociationSet Name="Generates" Association="ac3d16Model.Generates">
+            <End Role="monthlyfee" EntitySet="monthlyfees" />
+            <End Role="attendance" EntitySet="attendances" />
+          </AssociationSet>
+          <AssociationSet Name="LocatedIn" Association="ac3d16Model.LocatedIn">
+            <End Role="room" EntitySet="rooms" />
+            <End Role="attendance" EntitySet="attendances" />
+          </AssociationSet>
+          <AssociationSet Name="AccumulatedBy" Association="ac3d16Model.AccumulatedBy">
+            <End Role="child" EntitySet="children" />
+            <End Role="monthlyfee" EntitySet="monthlyfees" />
+          </AssociationSet>
+          <AssociationSet Name="Enrolls" Association="ac3d16Model.Enrolls">
+            <End Role="child" EntitySet="children" />
+            <End Role="register" EntitySet="registers" />
+          </AssociationSet>
+          <AssociationSet Name="Occupies" Association="ac3d16Model.Occupies">
+            <End Role="room" EntitySet="rooms" />
+            <End Role="child" EntitySet="children" />
+          </AssociationSet>
+          <AssociationSet Name="OffspringOff" Association="ac3d16Model.OffspringOff">
+            <End Role="child" EntitySet="children" />
+            <End Role="childparent" EntitySet="childparents" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresContact" Association="ac3d16Model.RequiresContact">
+            <End Role="child" EntitySet="children" />
+            <End Role="childemergencycontact" EntitySet="childemergencycontacts" />
+          </AssociationSet>
+          <AssociationSet Name="Uses" Association="ac3d16Model.Uses">
+            <End Role="child" EntitySet="children" />
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregisters" />
+          </AssociationSet>
+          <AssociationSet Name="RequiredForEmergency" Association="ac3d16Model.RequiredForEmergency">
+            <End Role="emergencycontact" EntitySet="emergencycontacts" />
+            <End Role="childemergencycontact" EntitySet="childemergencycontacts" />
+          </AssociationSet>
+          <AssociationSet Name="ResponsibleFor" Association="ac3d16Model.ResponsibleFor">
+            <End Role="parent" EntitySet="parents" />
+            <End Role="childparent" EntitySet="childparents" />
+          </AssociationSet>
+          <AssociationSet Name="RegistedTo" Association="ac3d16Model.RegistedTo">
+            <End Role="doctor" EntitySet="doctors" />
+            <End Role="consent" EntitySet="consents" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresConsent" Association="ac3d16Model.RequiresConsent">
+            <End Role="consent" EntitySet="consents" />
+            <End Role="register" EntitySet="registers" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresDeposit" Association="ac3d16Model.RequiresDeposit">
+            <End Role="deposit" EntitySet="deposits" />
+            <End Role="register" EntitySet="registers" />
+          </AssociationSet>
+          <AssociationSet Name="RequiresDoctor" Association="ac3d16Model.RequiresDoctor">
+            <End Role="doctor" EntitySet="doctors" />
+            <End Role="register" EntitySet="registers" />
+          </AssociationSet>
+          <AssociationSet Name="calculatedFrom" Association="ac3d16Model.calculatedFrom">
+            <End Role="room" EntitySet="rooms" />
+            <End Role="monthlyfee" EntitySet="monthlyfees" />
+          </AssociationSet>
+          <AssociationSet Name="GeneratesFee" Association="ac3d16Model.GeneratesFee">
+            <End Role="monthlyfee" EntitySet="monthlyfees" />
+            <End Role="monthlyinvoice" EntitySet="monthlyinvoices" />
+          </AssociationSet>
+          <AssociationSet Name="PaidBy" Association="ac3d16Model.PaidBy">
+            <End Role="parent" EntitySet="parents" />
+            <End Role="monthlyfee" EntitySet="monthlyfees" />
+          </AssociationSet>
+          <AssociationSet Name="Discounts" Association="ac3d16Model.Discounts">
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregisters" />
+            <End Role="monthlyinvoice" EntitySet="monthlyinvoices" />
+          </AssociationSet>
+          <AssociationSet Name="Requests" Association="ac3d16Model.Requests">
+            <End Role="monthlyinvoice" EntitySet="monthlyinvoices" />
+            <End Role="paymenthistory" EntitySet="paymenthistories" />
+          </AssociationSet>
+          <AssociationSet Name="Accredited" Association="ac3d16Model.Accredited">
+            <End Role="parent" EntitySet="parents" />
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregisters" />
+          </AssociationSet>
+          <AssociationSet Name="PaymentBy" Association="ac3d16Model.PaymentBy">
+            <End Role="parent" EntitySet="parents" />
+            <End Role="paymenthistory" EntitySet="paymenthistories" />
+          </AssociationSet>
+          <AssociationSet Name="Provides" Association="ac3d16Model.Provides">
+            <End Role="voucherschemeprovider" EntitySet="voucherschemeproviders" />
+            <End Role="voucherschemeregister" EntitySet="voucherschemeregisters" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="absence">
+          <Key>
+            <PropertyRef Name="AbsenceID" />
+          </Key>
+          <Property Name="AbsenceID" Type="String" Nullable="false" />
+          <Property Name="ChildID" Type="String" />
+          <Property Name="AbsenceDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="child" Relationship="ac3d16Model.causes" FromRole="absence" ToRole="child" />
+        </EntityType>
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Name="AddressID" Type="String" Nullable="false" />
+          <Property Name="AddressLine" Type="String" Nullable="false" />
+          <Property Name="AddressLineTwo" Type="String" Nullable="false" />
+          <Property Name="City" Type="String" Nullable="false" />
+          <Property Name="County" Type="String" Nullable="false" />
+          <Property Name="Postcode" Type="String" Nullable="false" />
+          <Property Name="Country" Type="String" Nullable="false" />
+          <NavigationProperty Name="doctors" Relationship="ac3d16Model.PracticeAt" FromRole="address" ToRole="doctor" />
+          <NavigationProperty Name="emergencycontacts" Relationship="ac3d16Model.Requires" FromRole="address" ToRole="emergencycontact" />
+          <NavigationProperty Name="children" Relationship="ac3d16Model.ResidesAt" FromRole="address" ToRole="child" />
+        </EntityType>
+        <EntityType Name="attendance">
+          <Key>
+            <PropertyRef Name="AttendanceID" />
+          </Key>
+          <Property Name="AttendanceID" Type="String" Nullable="false" />
+          <Property Name="ChildID" Type="String" />
+          <Property Name="FeeID" Type="String" />
+          <Property Name="RoomName" Type="String" Nullable="false" />
+          <Property Name="WeekStart" Type="DateTime" Nullable="false" />
+          <Property Name="Teas" Type="Byte" Nullable="false" />
+          <Property Name="Monday" Type="Boolean" Nullable="false" />
+          <Property Name="Tuesday" Type="Boolean" Nullable="false" />
+          <Property Name="Wednesday" Type="Boolean" Nullable="false" />
+          <Property Name="Thursday" Type="Boolean" Nullable="false" />
+          <Property Name="Friday" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="child" Relationship="ac3d16Model.Attends" FromRole="attendance" ToRole="child" />
+          <NavigationProperty Name="monthlyfee" Relationship="ac3d16Model.Generates" FromRole="attendance" ToRole="monthlyfee" />
+          <NavigationProperty Name="room" Relationship="ac3d16Model.LocatedIn" FromRole="attendance" ToRole="room" />
+        </EntityType>
+        <EntityType Name="child">
+          <Key>
+            <PropertyRef Name="ChildID" />
+          </Key>
+          <Property Name="ChildID" Type="String" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" />
+          <Property Name="LeavingDate" Type="DateTime" />
+          <Property Name="RoomName" Type="String" Nullable="false" />
+          <Property Name="AddressID" Type="String" Nullable="false" />
+          <NavigationProperty Name="absences" Relationship="ac3d16Model.causes" FromRole="child" ToRole="absence" />
+          <NavigationProperty Name="address" Relationship="ac3d16Model.ResidesAt" FromRole="child" ToRole="address" />
+          <NavigationProperty Name="attendances" Relationship="ac3d16Model.Attends" FromRole="child" ToRole="attendance" />
+          <NavigationProperty Name="monthlyfees" Relationship="ac3d16Model.AccumulatedBy" FromRole="child" ToRole="monthlyfee" />
+          <NavigationProperty Name="registers" Relationship="ac3d16Model.Enrolls" FromRole="child" ToRole="register" />
+          <NavigationProperty Name="room" Relationship="ac3d16Model.Occupies" FromRole="child" ToRole="room" />
+          <NavigationProperty Name="childparents" Relationship="ac3d16Model.OffspringOff" FromRole="child" ToRole="childparent" />
+          <NavigationProperty Name="childemergencycontacts" Relationship="ac3d16Model.RequiresContact" FromRole="child" ToRole="childemergencycontact" />
+          <NavigationProperty Name="voucherschemeregisters" Relationship="ac3d16Model.Uses" FromRole="child" ToRole="voucherschemeregister" />
+        </EntityType>
+        <EntityType Name="childemergencycontact">
+          <Key>
+            <PropertyRef Name="ChildID" />
+            <PropertyRef Name="EmergencyContactID" />
+          </Key>
+          <Property Name="ChildID" Type="String" Nullable="false" />
+          <Property Name="EmergencyContactID" Type="String" Nullable="false" />
+          <Property Name="Relationship" Type="String" Nullable="false" />
+          <NavigationProperty Name="child" Relationship="ac3d16Model.RequiresContact" FromRole="childemergencycontact" ToRole="child" />
+          <NavigationProperty Name="emergencycontact" Relationship="ac3d16Model.RequiredForEmergency" FromRole="childemergencycontact" ToRole="emergencycontact" />
+        </EntityType>
+        <EntityType Name="childparent">
+          <Key>
+            <PropertyRef Name="ChildID" />
+            <PropertyRef Name="ParentID" />
+          </Key>
+          <Property Name="ChildID" Type="String" Nullable="false" />
+          <Property Name="ParentID" Type="String" Nullable="false" />
+          <Property Name="Relationship" Type="String" Nullable="false" />
+          <NavigationProperty Name="child" Relationship="ac3d16Model.OffspringOff" FromRole="childparent" ToRole="child" />
+          <NavigationProperty Name="parent" Relationship="ac3d16Model.ResponsibleFor" FromRole="childparent" ToRole="parent" />
+        </EntityType>
+        <EntityType Name="consent">
+          <Key>
+            <PropertyRef Name="ConsentID" />
+          </Key>
+          <Property Name="ConsentID" Type="String" Nullable="false" />
+          <Property Name="DoctorID" Type="String" Nullable="false" />
+          <Property Name="NurseryPolicies" Type="Boolean" Nullable="false" />
+          <Property Name="NurseryPoliciesDate" Type="DateTime" Nullable="false" />
+          <Property Name="AdministerCapol" Type="Boolean" Nullable="false" />
+          <Property Name="AdministerCapolDate" Type="DateTime" Nullable="false" />
+          <Property Name="ApplySunCream" Type="Boolean" Nullable="false" />
+          <Property Name="ApplySunCreamDate" Type="DateTime" Nullable="false" />
+          <Property Name="CoachTrips" Type="Boolean" Nullable="false" />
+          <Property Name="NurseryPhotos" Type="Boolean" Nullable="false" />
+          <Property Name="PhotosTaken" Type="Boolean" Nullable="false" />
+          <Property Name="PublicTransport" Type="Boolean" Nullable="false" />
+          <Property Name="PublicityPhoto" Type="Boolean" Nullable="false" />
+          <Property Name="ReceiveMedicalTreatmentDate" Type="DateTime" Nullable="false" />
+          <Property Name="RecieveMedicalTreatment" Type="Boolean" Nullable="false" />
+          <Property Name="ReportPhoto" Type="Boolean" Nullable="false" />
+          <Property Name="Walks" Type="Boolean" Nullable="false" />
+          <Property Name="WebsitePhotos" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="doctor" Relationship="ac3d16Model.RegistedTo" FromRole="consent" ToRole="doctor" />
+          <NavigationProperty Name="registers" Relationship="ac3d16Model.RequiresConsent" FromRole="consent" ToRole="register" />
+        </EntityType>
+        <EntityType Name="deposit">
+          <Key>
+            <PropertyRef Name="DepositID" />
+          </Key>
+          <Property Name="DepositID" Type="String" Nullable="false" />
+          <Property Name="DepositPaid" Type="Boolean" Nullable="false" />
+          <Property Name="DepositReturned" Type="Boolean" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" />
+          <Property Name="DepositPaidDate" Type="DateTime" Nullable="false" />
+          <Property Name="DepositRefundedDate" Type="DateTime" />
+          <NavigationProperty Name="registers" Relationship="ac3d16Model.RequiresDeposit" FromRole="deposit" ToRole="register" />
+        </EntityType>
+        <EntityType Name="doctor">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="String" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="AddressID" Type="String" Nullable="false" />
+          <NavigationProperty Name="address" Relationship="ac3d16Model.PracticeAt" FromRole="doctor" ToRole="address" />
+          <NavigationProperty Name="consents" Relationship="ac3d16Model.RegistedTo" FromRole="doctor" ToRole="consent" />
+          <NavigationProperty Name="registers" Relationship="ac3d16Model.RequiresDoctor" FromRole="doctor" ToRole="register" />
+        </EntityType>
+        <EntityType Name="emergencycontact">
+          <Key>
+            <PropertyRef Name="EmergencyContactID" />
+          </Key>
+          <Property Name="EmergencyContactID" Type="String" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="AddressID" Type="String" Nullable="false" />
+          <Property Name="HomePhone" Type="String" Nullable="false" />
+          <Property Name="MobilePhone" Type="String" />
+          <NavigationProperty Name="address" Relationship="ac3d16Model.Requires" FromRole="emergencycontact" ToRole="address" />
+          <NavigationProperty Name="childemergencycontacts" Relationship="ac3d16Model.RequiredForEmergency" FromRole="emergencycontact" ToRole="childemergencycontact" />
+        </EntityType>
+        <EntityType Name="monthlyfee">
+          <Key>
+            <PropertyRef Name="FeeID" />
+          </Key>
+          <Property Name="FeeID" Type="String" Nullable="false" />
+          <Property Name="DateCharged" Type="DateTime" Nullable="false" />
+          <Property Name="ChildID" Type="String" Nullable="false" />
+          <Property Name="ParentID" Type="String" Nullable="false" />
+          <Property Name="RoomName" Type="String" Nullable="false" />
+          <NavigationProperty Name="attendances" Relationship="ac3d16Model.Generates" FromRole="monthlyfee" ToRole="attendance" />
+          <NavigationProperty Name="child" Relationship="ac3d16Model.AccumulatedBy" FromRole="monthlyfee" ToRole="child" />
+          <NavigationProperty Name="room" Relationship="ac3d16Model.calculatedFrom" FromRole="monthlyfee" ToRole="room" />
+          <NavigationProperty Name="monthlyinvoices" Relationship="ac3d16Model.GeneratesFee" FromRole="monthlyfee" ToRole="monthlyinvoice" />
+          <NavigationProperty Name="parent" Relationship="ac3d16Model.PaidBy" FromRole="monthlyfee" ToRole="parent" />
+        </EntityType>
+        <EntityType Name="monthlyinvoice">
+          <Key>
+            <PropertyRef Name="InvoiceID" />
+          </Key>
+          <Property Name="InvoiceID" Type="String" Nullable="false" />
+          <Property Name="FeeID" Type="String" Nullable="false" />
+          <Property Name="VoucherSchemeID" Type="String" Nullable="false" />
+          <Property Name="PayDate" Type="DateTime" Nullable="false" />
+          <Property Name="LateFees" Type="Decimal" Nullable="false" />
+          <Property Name="Outstanding" Type="Decimal" Nullable="false" />
+          <Property Name="Deductions" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="monthlyfee" Relationship="ac3d16Model.GeneratesFee" FromRole="monthlyinvoice" ToRole="monthlyfee" />
+          <NavigationProperty Name="voucherschemeregister" Relationship="ac3d16Model.Discounts" FromRole="monthlyinvoice" ToRole="voucherschemeregister" />
+          <NavigationProperty Name="paymenthistories" Relationship="ac3d16Model.Requests" FromRole="monthlyinvoice" ToRole="paymenthistory" />
+        </EntityType>
+        <EntityType Name="parent">
+          <Key>
+            <PropertyRef Name="ParentID" />
+          </Key>
+          <Property Name="ParentID" Type="String" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="HomeTelephone" Type="String" Nullable="false" />
+          <Property Name="WorkTelephone" Type="String" />
+          <Property Name="MobileTelephone" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" />
+          <Property Name="NamedKnownatWork" Type="String" />
+          <NavigationProperty Name="childparents" Relationship="ac3d16Model.ResponsibleFor" FromRole="parent" ToRole="childparent" />
+          <NavigationProperty Name="monthlyfees" Relationship="ac3d16Model.PaidBy" FromRole="parent" ToRole="monthlyfee" />
+          <NavigationProperty Name="voucherschemeregisters" Relationship="ac3d16Model.Accredited" FromRole="parent" ToRole="voucherschemeregister" />
+          <NavigationProperty Name="paymenthistories" Relationship="ac3d16Model.PaymentBy" FromRole="parent" ToRole="paymenthistory" />
+        </EntityType>
+        <EntityType Name="paymenthistory">
+          <Key>
+            <PropertyRef Name="PaymentID" />
+          </Key>
+          <Property Name="PaymentID" Type="String" Nullable="false" />
+          <Property Name="InvoiceID" Type="String" Nullable="false" />
+          <Property Name="ParentID" Type="String" />
+          <Property Name="Paid" Type="Boolean" Nullable="false" />
+          <Property Name="PaymentType" Type="String" Nullable="false" />
+          <Property Name="DateDue" Type="DateTime" Nullable="false" />
+          <Property Name="AmountDue" Type="Decimal" Nullable="false" />
+          <Property Name="DatePaid" Type="DateTime" />
+          <NavigationProperty Name="monthlyinvoice" Relationship="ac3d16Model.Requests" FromRole="paymenthistory" ToRole="monthlyinvoice" />
+          <NavigationProperty Name="parent" Relationship="ac3d16Model.PaymentBy" FromRole="paymenthistory" ToRole="parent" />
+        </EntityType>
+        <EntityType Name="register">
+          <Key>
+            <PropertyRef Name="RegisterID" />
+          </Key>
+          <Property Name="RegisterID" Type="String" Nullable="false" />
+          <Property Name="ChildID" Type="String" Nullable="false" />
+          <Property Name="ConsentID" Type="String" Nullable="false" />
+          <Property Name="DepositID" Type="String" Nullable="false" />
+          <Property Name="DoctorID" Type="String" Nullable="false" />
+          <Property Name="PlacementType" Type="String" Nullable="false" />
+          <Property Name="PreferedStartDate" Type="DateTime" />
+          <NavigationProperty Name="child" Relationship="ac3d16Model.Enrolls" FromRole="register" ToRole="child" />
+          <NavigationProperty Name="consent" Relationship="ac3d16Model.RequiresConsent" FromRole="register" ToRole="consent" />
+          <NavigationProperty Name="deposit" Relationship="ac3d16Model.RequiresDeposit" FromRole="register" ToRole="deposit" />
+          <NavigationProperty Name="doctor" Relationship="ac3d16Model.RequiresDoctor" FromRole="register" ToRole="doctor" />
+        </EntityType>
+        <EntityType Name="room">
+          <Key>
+            <PropertyRef Name="RoomName" />
+          </Key>
+          <Property Name="RoomName" Type="String" Nullable="false" />
+          <Property Name="DailyCharge" Type="Decimal" Nullable="false" />
+          <Property Name="WeeklyCharge" Type="Decimal" Nullable="false" />
+          <Property Name="TeaCharge" Type="Decimal" Nullable="false" />
+          <Property Name="RoomVacancy" Type="Byte" Nullable="false" />
+          <Property Name="AgeGroup" Type="String" Nullable="false" />
+          <Property Name="StaffRatio" Type="String" Nullable="false" />
+          <NavigationProperty Name="attendances" Relationship="ac3d16Model.LocatedIn" FromRole="room" ToRole="attendance" />
+          <NavigationProperty Name="children" Relationship="ac3d16Model.Occupies" FromRole="room" ToRole="child" />
+          <NavigationProperty Name="monthlyfees" Relationship="ac3d16Model.calculatedFrom" FromRole="room" ToRole="monthlyfee" />
+        </EntityType>
+        <EntityType Name="voucherschemeprovider">
+          <Key>
+            <PropertyRef Name="VoucherSchemeProviderId" />
+          </Key>
+          <Property Name="VoucherSchemeProviderId" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Discount" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="voucherschemeregisters" Relationship="ac3d16Model.Provides" FromRole="voucherschemeprovider" ToRole="voucherschemeregister" />
+        </EntityType>
+        <EntityType Name="voucherschemeregister">
+          <Key>
+            <PropertyRef Name="VoucherSchemeID" />
+          </Key>
+          <Property Name="VoucherSchemeID" Type="String" Nullable="false" />
+          <Property Name="VoucherSchemeProviderId" Type="String" Nullable="false" />
+          <Property Name="ChildID" Type="String" Nullable="false" />
+          <Property Name="ParentID" Type="String" Nullable="false" />
+          <Property Name="IntendedStartDate" Type="DateTime" Nullable="false" />
+          <Property Name="RegisteredWithCouncil" Type="Boolean" Nullable="false" />
+          <Property Name="DateSigned" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="child" Relationship="ac3d16Model.Uses" FromRole="voucherschemeregister" ToRole="child" />
+          <NavigationProperty Name="monthlyinvoices" Relationship="ac3d16Model.Discounts" FromRole="voucherschemeregister" ToRole="monthlyinvoice" />
+          <NavigationProperty Name="parent" Relationship="ac3d16Model.Accredited" FromRole="voucherschemeregister" ToRole="parent" />
+          <NavigationProperty Name="voucherschemeprovider" Relationship="ac3d16Model.Provides" FromRole="voucherschemeregister" ToRole="voucherschemeprovider" />
+        </EntityType>
+        <Association Name="causes">
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="0..1" />
+          <End Role="absence" Type="ac3d16Model.absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="absence">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PracticeAt">
+          <End Role="address" Type="ac3d16Model.address" Multiplicity="1" />
+          <End Role="doctor" Type="ac3d16Model.doctor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="doctor">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Requires">
+          <End Role="address" Type="ac3d16Model.address" Multiplicity="1" />
+          <End Role="emergencycontact" Type="ac3d16Model.emergencycontact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="emergencycontact">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ResidesAt">
+          <End Role="address" Type="ac3d16Model.address" Multiplicity="1" />
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="child">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Attends">
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="0..1" />
+          <End Role="attendance" Type="ac3d16Model.attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="attendance">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Generates">
+          <End Role="monthlyfee" Type="ac3d16Model.monthlyfee" Multiplicity="0..1" />
+          <End Role="attendance" Type="ac3d16Model.attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="monthlyfee">
+              <PropertyRef Name="FeeID" />
+            </Principal>
+            <Dependent Role="attendance">
+              <PropertyRef Name="FeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LocatedIn">
+          <End Role="room" Type="ac3d16Model.room" Multiplicity="1" />
+          <End Role="attendance" Type="ac3d16Model.attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room">
+              <PropertyRef Name="RoomName" />
+            </Principal>
+            <Dependent Role="attendance">
+              <PropertyRef Name="RoomName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AccumulatedBy">
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="1" />
+          <End Role="monthlyfee" Type="ac3d16Model.monthlyfee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="monthlyfee">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Enrolls">
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Occupies">
+          <End Role="room" Type="ac3d16Model.room" Multiplicity="1" />
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room">
+              <PropertyRef Name="RoomName" />
+            </Principal>
+            <Dependent Role="child">
+              <PropertyRef Name="RoomName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="OffspringOff">
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="1" />
+          <End Role="childparent" Type="ac3d16Model.childparent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="childparent">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresContact">
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="1" />
+          <End Role="childemergencycontact" Type="ac3d16Model.childemergencycontact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="childemergencycontact">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Uses">
+          <End Role="child" Type="ac3d16Model.child" Multiplicity="1" />
+          <End Role="voucherschemeregister" Type="ac3d16Model.voucherschemeregister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="child">
+              <PropertyRef Name="ChildID" />
+            </Principal>
+            <Dependent Role="voucherschemeregister">
+              <PropertyRef Name="ChildID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiredForEmergency">
+          <End Role="emergencycontact" Type="ac3d16Model.emergencycontact" Multiplicity="1" />
+          <End Role="childemergencycontact" Type="ac3d16Model.childemergencycontact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="emergencycontact">
+              <PropertyRef Name="EmergencyContactID" />
+            </Principal>
+            <Dependent Role="childemergencycontact">
+              <PropertyRef Name="EmergencyContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ResponsibleFor">
+          <End Role="parent" Type="ac3d16Model.parent" Multiplicity="1" />
+          <End Role="childparent" Type="ac3d16Model.childparent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="childparent">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RegistedTo">
+          <End Role="doctor" Type="ac3d16Model.doctor" Multiplicity="1" />
+          <End Role="consent" Type="ac3d16Model.consent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="consent">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresConsent">
+          <End Role="consent" Type="ac3d16Model.consent" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="consent">
+              <PropertyRef Name="ConsentID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="ConsentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresDeposit">
+          <End Role="deposit" Type="ac3d16Model.deposit" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deposit">
+              <PropertyRef Name="DepositID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="DepositID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequiresDoctor">
+          <End Role="doctor" Type="ac3d16Model.doctor" Multiplicity="1" />
+          <End Role="register" Type="ac3d16Model.register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="register">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="calculatedFrom">
+          <End Role="room" Type="ac3d16Model.room" Multiplicity="1" />
+          <End Role="monthlyfee" Type="ac3d16Model.monthlyfee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room">
+              <PropertyRef Name="RoomName" />
+            </Principal>
+            <Dependent Role="monthlyfee">
+              <PropertyRef Name="RoomName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GeneratesFee">
+          <End Role="monthlyfee" Type="ac3d16Model.monthlyfee" Multiplicity="1" />
+          <End Role="monthlyinvoice" Type="ac3d16Model.monthlyinvoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="monthlyfee">
+              <PropertyRef Name="FeeID" />
+            </Principal>
+            <Dependent Role="monthlyinvoice">
+              <PropertyRef Name="FeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PaidBy">
+          <End Role="parent" Type="ac3d16Model.parent" Multiplicity="1" />
+          <End Role="monthlyfee" Type="ac3d16Model.monthlyfee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="monthlyfee">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Discounts">
+          <End Role="voucherschemeregister" Type="ac3d16Model.voucherschemeregister" Multiplicity="1" />
+          <End Role="monthlyinvoice" Type="ac3d16Model.monthlyinvoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="voucherschemeregister">
+              <PropertyRef Name="VoucherSchemeID" />
+            </Principal>
+            <Dependent Role="monthlyinvoice">
+              <PropertyRef Name="VoucherSchemeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Requests">
+          <End Role="monthlyinvoice" Type="ac3d16Model.monthlyinvoice" Multiplicity="1" />
+          <End Role="paymenthistory" Type="ac3d16Model.paymenthistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="monthlyinvoice">
+              <PropertyRef Name="InvoiceID" />
+            </Principal>
+            <Dependent Role="paymenthistory">
+              <PropertyRef Name="InvoiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Accredited">
+          <End Role="parent" Type="ac3d16Model.parent" Multiplicity="1" />
+          <End Role="voucherschemeregister" Type="ac3d16Model.voucherschemeregister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="voucherschemeregister">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PaymentBy">
+          <End Role="parent" Type="ac3d16Model.parent" Multiplicity="0..1" />
+          <End Role="paymenthistory" Type="ac3d16Model.paymenthistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parent">
+              <PropertyRef Name="ParentID" />
+            </Principal>
+            <Dependent Role="paymenthistory">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Provides">
+          <End Role="voucherschemeprovider" Type="ac3d16Model.voucherschemeprovider" Multiplicity="1" />
+          <End Role="voucherschemeregister" Type="ac3d16Model.voucherschemeregister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="voucherschemeprovider">
+              <PropertyRef Name="VoucherSchemeProviderId" />
+            </Principal>
+            <Dependent Role="voucherschemeregister">
+              <PropertyRef Name="VoucherSchemeProviderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ac3d16ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="absences"><EntityTypeMapping TypeName="ac3d16Model.absence"><MappingFragment StoreEntitySet="absence">
+            <ScalarProperty Name="AbsenceID" ColumnName="AbsenceID" />
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="AbsenceDate" ColumnName="AbsenceDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="addresses"><EntityTypeMapping TypeName="ac3d16Model.address"><MappingFragment StoreEntitySet="address">
+            <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+            <ScalarProperty Name="AddressLine" ColumnName="AddressLine" />
+            <ScalarProperty Name="AddressLineTwo" ColumnName="AddressLineTwo" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="County" ColumnName="County" />
+            <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="attendances"><EntityTypeMapping TypeName="ac3d16Model.attendance"><MappingFragment StoreEntitySet="attendance">
+            <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="FeeID" ColumnName="FeeID" />
+            <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+            <ScalarProperty Name="WeekStart" ColumnName="WeekStart" />
+            <ScalarProperty Name="Teas" ColumnName="Teas" />
+            <ScalarProperty Name="Monday" ColumnName="Monday" />
+            <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+            <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+            <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+            <ScalarProperty Name="Friday" ColumnName="Friday" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="children"><EntityTypeMapping TypeName="ac3d16Model.child"><MappingFragment StoreEntitySet="child">
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="DOB" ColumnName="DOB" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="LeavingDate" ColumnName="LeavingDate" />
+            <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+            <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="childemergencycontacts"><EntityTypeMapping TypeName="ac3d16Model.childemergencycontact"><MappingFragment StoreEntitySet="childemergencycontact">
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="EmergencyContactID" ColumnName="EmergencyContactID" />
+            <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="childparents"><EntityTypeMapping TypeName="ac3d16Model.childparent"><MappingFragment StoreEntitySet="childparent">
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+            <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="consents"><EntityTypeMapping TypeName="ac3d16Model.consent"><MappingFragment StoreEntitySet="consent">
+            <ScalarProperty Name="ConsentID" ColumnName="ConsentID" />
+            <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+            <ScalarProperty Name="NurseryPolicies" ColumnName="NurseryPolicies" />
+            <ScalarProperty Name="NurseryPoliciesDate" ColumnName="NurseryPoliciesDate" />
+            <ScalarProperty Name="AdministerCapol" ColumnName="AdministerCapol" />
+            <ScalarProperty Name="AdministerCapolDate" ColumnName="AdministerCapolDate" />
+            <ScalarProperty Name="ApplySunCream" ColumnName="ApplySunCream" />
+            <ScalarProperty Name="ApplySunCreamDate" ColumnName="ApplySunCreamDate" />
+            <ScalarProperty Name="CoachTrips" ColumnName="CoachTrips" />
+            <ScalarProperty Name="NurseryPhotos" ColumnName="NurseryPhotos" />
+            <ScalarProperty Name="PhotosTaken" ColumnName="PhotosTaken" />
+            <ScalarProperty Name="PublicTransport" ColumnName="PublicTransport" />
+            <ScalarProperty Name="PublicityPhoto" ColumnName="PublicityPhoto" />
+            <ScalarProperty Name="ReceiveMedicalTreatmentDate" ColumnName="ReceiveMedicalTreatmentDate" />
+            <ScalarProperty Name="RecieveMedicalTreatment" ColumnName="RecieveMedicalTreatment" />
+            <ScalarProperty Name="ReportPhoto" ColumnName="ReportPhoto" />
+            <ScalarProperty Name="Walks" ColumnName="Walks" />
+            <ScalarProperty Name="WebsitePhotos" ColumnName="WebsitePhotos" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="deposits"><EntityTypeMapping TypeName="ac3d16Model.deposit"><MappingFragment StoreEntitySet="deposit">
+            <ScalarProperty Name="DepositID" ColumnName="DepositID" />
+            <ScalarProperty Name="DepositPaid" ColumnName="DepositPaid" />
+            <ScalarProperty Name="DepositReturned" ColumnName="DepositReturned" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="DepositPaidDate" ColumnName="DepositPaidDate" />
+            <ScalarProperty Name="DepositRefundedDate" ColumnName="DepositRefundedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="doctors"><EntityTypeMapping TypeName="ac3d16Model.doctor"><MappingFragment StoreEntitySet="doctor">
+            <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="emergencycontacts"><EntityTypeMapping TypeName="ac3d16Model.emergencycontact"><MappingFragment StoreEntitySet="emergencycontact">
+            <ScalarProperty Name="EmergencyContactID" ColumnName="EmergencyContactID" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+            <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+            <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="monthlyfees"><EntityTypeMapping TypeName="ac3d16Model.monthlyfee"><MappingFragment StoreEntitySet="monthlyfee">
+            <ScalarProperty Name="FeeID" ColumnName="FeeID" />
+            <ScalarProperty Name="DateCharged" ColumnName="DateCharged" />
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+            <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="monthlyinvoices"><EntityTypeMapping TypeName="ac3d16Model.monthlyinvoice"><MappingFragment StoreEntitySet="monthlyinvoice">
+            <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+            <ScalarProperty Name="FeeID" ColumnName="FeeID" />
+            <ScalarProperty Name="VoucherSchemeID" ColumnName="VoucherSchemeID" />
+            <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+            <ScalarProperty Name="LateFees" ColumnName="LateFees" />
+            <ScalarProperty Name="Outstanding" ColumnName="Outstanding" />
+            <ScalarProperty Name="Deductions" ColumnName="Deductions" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="parents"><EntityTypeMapping TypeName="ac3d16Model.parent"><MappingFragment StoreEntitySet="parent">
+            <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="HomeTelephone" ColumnName="HomeTelephone" />
+            <ScalarProperty Name="WorkTelephone" ColumnName="WorkTelephone" />
+            <ScalarProperty Name="MobileTelephone" ColumnName="MobileTelephone" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="NamedKnownatWork" ColumnName="NamedKnownatWork" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="paymenthistories"><EntityTypeMapping TypeName="ac3d16Model.paymenthistory"><MappingFragment StoreEntitySet="paymenthistory">
+            <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+            <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+            <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+            <ScalarProperty Name="Paid" ColumnName="Paid" />
+            <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+            <ScalarProperty Name="DateDue" ColumnName="DateDue" />
+            <ScalarProperty Name="AmountDue" ColumnName="AmountDue" />
+            <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="registers"><EntityTypeMapping TypeName="ac3d16Model.register"><MappingFragment StoreEntitySet="register">
+            <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="ConsentID" ColumnName="ConsentID" />
+            <ScalarProperty Name="DepositID" ColumnName="DepositID" />
+            <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+            <ScalarProperty Name="PlacementType" ColumnName="PlacementType" />
+            <ScalarProperty Name="PreferedStartDate" ColumnName="PreferedStartDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="rooms"><EntityTypeMapping TypeName="ac3d16Model.room"><MappingFragment StoreEntitySet="room">
+            <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+            <ScalarProperty Name="DailyCharge" ColumnName="DailyCharge" />
+            <ScalarProperty Name="WeeklyCharge" ColumnName="WeeklyCharge" />
+            <ScalarProperty Name="TeaCharge" ColumnName="TeaCharge" />
+            <ScalarProperty Name="RoomVacancy" ColumnName="RoomVacancy" />
+            <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+            <ScalarProperty Name="StaffRatio" ColumnName="StaffRatio" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="voucherschemeproviders"><EntityTypeMapping TypeName="ac3d16Model.voucherschemeprovider"><MappingFragment StoreEntitySet="voucherschemeprovider">
+            <ScalarProperty Name="VoucherSchemeProviderId" ColumnName="VoucherSchemeProviderId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Discount" ColumnName="Discount" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="voucherschemeregisters"><EntityTypeMapping TypeName="ac3d16Model.voucherschemeregister"><MappingFragment StoreEntitySet="voucherschemeregister">
+            <ScalarProperty Name="VoucherSchemeID" ColumnName="VoucherSchemeID" />
+            <ScalarProperty Name="VoucherSchemeProviderId" ColumnName="VoucherSchemeProviderId" />
+            <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+            <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+            <ScalarProperty Name="IntendedStartDate" ColumnName="IntendedStartDate" />
+            <ScalarProperty Name="RegisteredWithCouncil" ColumnName="RegisteredWithCouncil" />
+            <ScalarProperty Name="DateSigned" ColumnName="DateSigned" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TBNC" ZoomLevel="119">
+        <EntityTypeShape EntityType="ac3d16Model.absence" Width="1.5" PointX="5.25" PointY="12.875" Height="1.770080014268558" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.address" Width="1.5" PointX="0.75" PointY="13.25" Height="2.9085414550701767" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.attendance" Width="1.5" PointX="8.25" PointY="9.875" Height="3.6675157489379266" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.child" Width="1.5" PointX="3" PointY="11.625" Height="4.2367464693387369" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.childemergencycontact" Width="1.5" PointX="8.25" PointY="18.625" Height="1.9598235877354924" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.childparent" Width="1.5" PointX="5.25" PointY="9.75" Height="1.9598235877354924" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.consent" Width="1.5" PointX="5.25" PointY="15.625" Height="4.8059771897395436" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.deposit" Width="1.5" PointX="5.25" PointY="21.875" Height="2.3393107346693682" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.doctor" Width="1.5" PointX="3" PointY="16.875" Height="2.3393107346693682" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.emergencycontact" Width="1.5" PointX="3" PointY="21.25" Height="2.5290543081363097" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.monthlyfee" Width="1.5" PointX="11.25" PointY="12.25" Height="2.9085414550701785" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.monthlyinvoice" Width="1.5" PointX="13.5" PointY="10.25" Height="2.9085414550701785" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.parent" Width="1.5" PointX="9" PointY="4.75" Height="3.4777721754709887" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.paymenthistory" Width="1.5" PointX="15.75" PointY="10.25" Height="2.9085414550701785" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.register" Width="1.5" PointX="7.5" PointY="14.5" Height="3.09828502853712" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.room" Width="1.5" PointX="0.75" PointY="9.25" Height="2.9085414550701785" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.voucherschemeprovider" Width="1.5" PointX="6.375" PointY="1" Height="1.770080014268558" IsExpanded="true" />
+        <EntityTypeShape EntityType="ac3d16Model.voucherschemeregister" Width="1.5" PointX="11.25" PointY="8.125" Height="3.09828502853712" IsExpanded="true" />
+        <AssociationConnector Association="ac3d16Model.causes" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.760040007134279" />
+          <ConnectorPoint PointX="5.25" PointY="13.760040007134279" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.PracticeAt" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="16.158541455070178" />
+          <ConnectorPoint PointX="1.5" PointY="18.044655367334684" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="18.044655367334684" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="18.044655367334684" />
+          <ConnectorPoint PointX="3" PointY="18.044655367334684" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Requires" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="16.158541455070178" />
+          <ConnectorPoint PointX="1.9062525" PointY="22.514527154068155" />
+          <ConnectorPoint PointX="3" PointY="22.514527154068155" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.ResidesAt" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.55587323466937" />
+          <ConnectorPoint PointX="3" PointY="14.55587323466937" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Attends" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.292411793867746" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="12.292411793867746" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="12.292411793867746" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="12.292411793867746" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="12.292411793867746" />
+          <ConnectorPoint PointX="8.25" PointY="12.292411793867746" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Generates" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="12.896257874468963" />
+          <ConnectorPoint PointX="10.442710833333335" PointY="12.896257874468963" />
+          <ConnectorPoint PointX="10.276044166666667" PointY="12.896257874468963" />
+          <ConnectorPoint PointX="9.75" PointY="12.896257874468963" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.LocatedIn" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.46875" />
+          <ConnectorPoint PointX="3.2604141666666666" PointY="9.46875" />
+          <ConnectorPoint PointX="3.4270808333333336" PointY="9.46875" />
+          <ConnectorPoint PointX="9" PointY="9.46875" />
+          <ConnectorPoint PointX="9" PointY="9.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.AccumulatedBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="11.625" />
+          <ConnectorPoint PointX="3.75" PointY="11.375" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="11.375" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="11.375" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="11.375" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="11.375" />
+          <ConnectorPoint PointX="5" PointY="11.375" />
+          <ConnectorPoint PointX="5" PointY="12.625" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="12.625" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="12.625" />
+          <ConnectorPoint PointX="8" PointY="12.625" />
+          <ConnectorPoint PointX="8" PointY="14.052506874468964" />
+          <ConnectorPoint PointX="10.276044166666667" PointY="14.052506874468964" />
+          <ConnectorPoint PointX="10.442710833333335" PointY="14.052506874468964" />
+          <ConnectorPoint PointX="11.25" PointY="14.052506874468964" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Enrolls" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.135040007134279" />
+          <ConnectorPoint PointX="7.5" PointY="15.135040007134279" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Occupies" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.891770727535089" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="11.891770727535089" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="11.891770727535089" />
+          <ConnectorPoint PointX="3" PointY="11.891770727535089" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.OffspringOff" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1562525" PointY="11.625" />
+          <ConnectorPoint PointX="4.1562525" PointY="10.5625" />
+          <ConnectorPoint PointX="5.25" PointY="10.5625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.RequiresContact" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="15.861746469338737" />
+          <ConnectorPoint PointX="3.75" PointY="16.625" />
+          <ConnectorPoint PointX="4.0416661666666664" PointY="16.625" />
+          <ConnectorPoint PointX="4.2083328333333325" PointY="16.625" />
+          <ConnectorPoint PointX="5" PointY="16.625" />
+          <ConnectorPoint PointX="5" PointY="20.680977189739544" />
+          <ConnectorPoint PointX="7.604166666666667" PointY="20.680977189739544" />
+          <ConnectorPoint PointX="7.770833333333333" PointY="20.680977189739544" />
+          <ConnectorPoint PointX="7.875" PointY="20.680977189739544" />
+          <ConnectorPoint PointX="7.875" PointY="19.604911793867746" />
+          <ConnectorPoint PointX="8.25" PointY="19.604911793867746" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Uses" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.3437475" PointY="11.625" />
+          <ConnectorPoint PointX="3.3437475" PointY="8.8795110877354944" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="8.8795110877354944" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="8.8795110877354944" />
+          <ConnectorPoint PointX="10.276044166666667" PointY="8.8795110877354944" />
+          <ConnectorPoint PointX="10.442710833333335" PointY="8.8795110877354944" />
+          <ConnectorPoint PointX="11.25" PointY="8.8795110877354944" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.RequiredForEmergency" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="21.53125" />
+          <ConnectorPoint PointX="7.604166666666667" PointY="21.53125" />
+          <ConnectorPoint PointX="7.770833333333333" PointY="21.53125" />
+          <ConnectorPoint PointX="9" PointY="21.53125" />
+          <ConnectorPoint PointX="9" PointY="20.584823587735492" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.ResponsibleFor" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.15625" PointY="8.2277721754709887" />
+          <ConnectorPoint PointX="10.15625" PointY="9.78125" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="9.78125" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="9.78125" />
+          <ConnectorPoint PointX="6.75" PointY="9.78125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.RegistedTo" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.044655367334684" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="18.044655367334684" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="18.044655367334684" />
+          <ConnectorPoint PointX="5.25" PointY="18.044655367334684" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.RequiresConsent" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.61164251426856" />
+          <ConnectorPoint PointX="7.5" PointY="16.61164251426856" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.RequiresDeposit" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="23.044655367334684" />
+          <ConnectorPoint PointX="7.6875" PointY="23.044655367334684" />
+          <ConnectorPoint PointX="7.6875" PointY="17.59828502853712" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.RequiresDoctor" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1249994999999995" PointY="16.875" />
+          <ConnectorPoint PointX="4.1249994999999995" PointY="16.04914251426856" />
+          <ConnectorPoint PointX="5" PointY="16.04914251426856" />
+          <ConnectorPoint PointX="5" PointY="15.375" />
+          <ConnectorPoint PointX="7.125" PointY="15.375" />
+          <ConnectorPoint PointX="7.125" PointY="15.87334126070142" />
+          <ConnectorPoint PointX="7.5" PointY="15.87334126070142" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.calculatedFrom" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="12.158541455070179" />
+          <ConnectorPoint PointX="1.5" PointY="13.000000000000002" />
+          <ConnectorPoint PointX="2.75" PointY="13.000000000000002" />
+          <ConnectorPoint PointX="2.75" PointY="11.125" />
+          <ConnectorPoint PointX="3.2604141666666666" PointY="11.125" />
+          <ConnectorPoint PointX="3.4270808333333336" PointY="11.125" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="11.125" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="11.125" />
+          <ConnectorPoint PointX="4.75" PointY="11.125" />
+          <ConnectorPoint PointX="4.75" PointY="11.959823587735492" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="11.959823587735492" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="11.959823587735492" />
+          <ConnectorPoint PointX="7.75" PointY="11.959823587735492" />
+          <ConnectorPoint PointX="7.75" PointY="13.797508811703445" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="13.797508811703445" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="13.797508811703445" />
+          <ConnectorPoint PointX="10.276044166666667" PointY="13.797508811703445" />
+          <ConnectorPoint PointX="10.442710833333335" PointY="13.797508811703445" />
+          <ConnectorPoint PointX="11.25" PointY="13.797508811703445" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.GeneratesFee" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="12.704270727535089" />
+          <ConnectorPoint PointX="13.5" PointY="12.704270727535089" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.PaidBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.3593775" PointY="8.2277721754709887" />
+          <ConnectorPoint PointX="10.3593775" PointY="14.636776664769572" />
+          <ConnectorPoint PointX="11.25" PointY="14.636776664769572" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Discounts" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="10.73664251426856" />
+          <ConnectorPoint PointX="13.5" PointY="10.73664251426856" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Requests" ManuallyRouted="false">
+          <ConnectorPoint PointX="15" PointY="11.704270727535089" />
+          <ConnectorPoint PointX="15.75" PointY="11.704270727535089" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Accredited" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="6.4374995" />
+          <ConnectorPoint PointX="12" PointY="6.4374995" />
+          <ConnectorPoint PointX="12" PointY="8.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.PaymentBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="5.5624972500000069" />
+          <ConnectorPoint PointX="16.5" PointY="5.5624972500000069" />
+          <ConnectorPoint PointX="16.5" PointY="10.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="ac3d16Model.Provides" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.34375" PointY="2.770080014268558" />
+          <ConnectorPoint PointX="7.34375" PointY="8.5536391316032478" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="8.5536391316032478" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="8.5536391316032478" />
+          <ConnectorPoint PointX="10.276044166666667" PointY="8.5536391316032478" />
+          <ConnectorPoint PointX="10.442710833333335" PointY="8.5536391316032478" />
+          <ConnectorPoint PointX="11.25" PointY="8.5536391316032478" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
